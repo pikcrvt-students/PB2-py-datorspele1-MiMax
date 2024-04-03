@@ -264,7 +264,7 @@ def printPictirefinal(xH):
 
 def inpyt():
     global i
-    print("Īevadiet atbildi: ", end="")
+    print("Ievadiet atbildi: ", end="")
     i = input("")
     hint()
 
@@ -309,7 +309,6 @@ if i == "git":
             printPictirefinal(x_final)
         elif i == "span":
             printPictirefinal(x_final)
-    
     if i == "span":
         printPicture(x2_3)
         inpyt()
@@ -324,7 +323,7 @@ if i == "git":
             printPictirefinal(x_final)
 if i == "python":
     printPicture(x1h)
-    i = input ("")
+    inpyt()
     if i == "git":
         printPicture(x2_1h)
         inpyt()
@@ -363,7 +362,7 @@ if i == "python":
             printPictirefinal(x_final)
 if i == "print":
     printPicture(x1)
-    i = input ("")
+    inpyt()
     if i == "git":
         printPicture(x2_1)
         inpyt()
@@ -404,7 +403,7 @@ if i == "print":
             printPictirefinal(x_final)
 if i == "span":
     printPicture(x3)
-    i = input ("")
+    inpyt()
     if i == "git":
         printPicture(x2_3)
         inpyt()
