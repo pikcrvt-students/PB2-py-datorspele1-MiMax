@@ -253,8 +253,22 @@ def x2_1_1h_def():
     os.system("cls")
     print(x2_1_1h)
     print(Jautajumi)
+def x2_1h_3_def():
+    os.system("cls")
+    print(x2_1h_3)
+    print(Jautajumi)
+y = 0
+def hint():
+    if i != "git" or i != "python" or i != "mainigais" or i != "print":
+        print("Jums ir grūti? Špikers...")
+        y = y + 1
+        if x == 5:
+            print("LOSE")
+            sys.exit()
+        
 
 i = input("")
+hint()
 if i == "git":
     os.system("cls")
     print(x2)
@@ -280,9 +294,7 @@ if i == "git":
         print(Jautajumi)
         i = input("")
         if i == "mainigais":
-            os.system("cls")
-            print(x2_1h_3)
-            print(Jautajumi)
+            x2_1h_3_def()
         elif i == "print":
             x2_1_1h_def()
         i = input("")
@@ -299,9 +311,7 @@ if i == "git":
         if i == "print":
             x2_1_3_def()
         elif i == "python":
-            os.system("cls")
-            print(x2_1h_3)
-            print(Jautajumi)
+            x2_1h_3_def()
         i = input("")
         if i == "print":
             final()
@@ -318,9 +328,7 @@ if i == "python":
         print(Jautajumi)
         i = input("")
         if i == "mainigais":
-            os.system("cls")
-            print(x2_1h_3)
-            print(Jautajumi)
+            x2_1h_3_def()
         elif i == "print":
             x2_1_1h_def()
         i = input("")
@@ -334,9 +342,7 @@ if i == "python":
         print(Jautajumi)
         i = input("")
         if i == "git":
-            os.system("cls")
-            print(x2_1h_3)
-            print(Jautajumi)
+            x2_1h_3_def()
         elif i == "print":
             os.system("cls")
             print(x1h_3_1)
@@ -426,9 +432,7 @@ if i == "mainigais":
         if i == "print":
             x2_1_3_def()
         elif i == "python":
-            os.system("cls")
-            print(x2_1h_3)
-            print(Jautajumi)
+            x2_1h_3_def()
         i = input("")
         if i == "print":
             final()
@@ -460,9 +464,7 @@ if i == "mainigais":
             print(x1h_3_1)
             print(Jautajumi)
         elif i == "git":
-            os.system("cls")
-            print(x2_1h_3)
-            print(Jautajumi)
+            x2_1h_3_def()
         i = input("")
         if i == "git":
             final()
