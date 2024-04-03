@@ -229,14 +229,15 @@ x3 = '''
                
 
 '''
-
+y = 5
 os.system("cls")
 print(x0, "Sveicinati! Šodien jūs risināsiet krustvārdu mīklu, novēlu jums veiksmi un nepieļaujiet kļūdas :)")
+print ("Jums palika", y,"kļudas")
 time.sleep(1)
 Jautajumi = '''1 (vertikali) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?
 1 (horizontali) Kāda programmēšanas valoda tiek izmantota Django projektā?
 2 Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? 
-3 Atribūts, kurš atgriež tupli, kas satur sakritības (sākuma, beigu) pozīcijas'''
+3 Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
 print(Jautajumi)
 pal = "Apsveicu!"
 
@@ -250,13 +251,13 @@ def printPictirefinal(xH):
     print(pal)
     sys.exit()
 
-y = 5
 def hint():
     global y
     global i
     while i != "git" and i != "python" and i != "span" and i != "print":
         print("Nepareizi!")
         y -= 1
+        print("Jums palika", y,"kļudas")
         if y == 0:
             print("LOSE")
             sys.exit()
