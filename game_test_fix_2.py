@@ -1,7 +1,7 @@
 import time
 import sys
 import os
-x_final = '''
+x_final = '''  
        _ _ _   _ _ _
        | g |   | s |
        | i |   | p |
@@ -229,19 +229,19 @@ x3 = '''
                
 
 '''
-y = 5
+Kļudu_skaits = 5
 os.system("cls")
 print(x0, "Sveicinati! Šodien jūs risināsiet krustvārdu mīklu, novēlu jums veiksmi un nepieļaujiet kļūdas :)")
-print ("Jums palika", y,"kļudas")
+print ("Jums palika", Kļudu_skaits,"kļudas")
 time.sleep(3)
-Jautajumi = '''1 (vertikali) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?
-1 (horizontali) Kāda programmēšanas valoda tiek izmantota Django projektā?
-2 Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? 
-3 Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
-Jautajumi1 = '''1 (vertikali) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?'''
-Jautajumi1h= '''1 (horizontali) Kāda programmēšanas valoda tiek izmantota Django projektā?'''
-Jautajumi2 = '''2 Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? '''
-Jautajumi3 = '''3 Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
+Jautajumi = '''1 (vertikali) (5 burti) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?
+1 (horizontali) (5 burti) Kāda programmēšanas valoda tiek izmantota Django projektā?
+2 (3 burti) Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? 
+3 (4 vurti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
+Jautajumi1 = '''1 (vertikali) (5 burti) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?'''
+Jautajumi1h= '''1 (horizontali) (5 burti) Kāda programmēšanas valoda tiek izmantota Django projektā?'''
+Jautajumi2 = '''2 (3 burti) Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? '''
+Jautajumi3 = '''3 (4 vurti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
 
 print(Jautajumi1)
 time.sleep(1)
@@ -262,181 +262,178 @@ def printPictirefinal(xH):
     print(pal)
     sys.exit()
 
-def inpyt():
-    global i
-    print("Ievadiet atbildi: ", end="")
-    i = input("")
-    hint()
+ievade=""
 
-def hint():
-    global y
-    global i
-    while i != "git" and i != "python" and i != "span" and i != "print":
+def ievade_code():
+    global ievade
+    global Kļudu_skaits
+    print("Ievadiet atbildi: ", end="")
+    ievade = input("")
+    while ievade != "git" and ievade != "python" and ievade != "span" and ievade != "print":
         print()
         print("Nepareizi!")
-        y -= 1
-        print("Jums palika", y,"kļudas")
-        if y == 0:
+        Kļudu_skaits -= 1
+        print("Jums palika", Kļudu_skaits,"kļudas")
+        if Kļudu_skaits == 0:
             print("LOSE")
+            time.sleep(2)
             sys.exit()
-        inpyt()
-
-inpyt()
-if i == "git":
+        ievade = input("")
+    
+ievade_code()
+if ievade == "git":
     printPicture(x2)
-    inpyt()
-    if i == "print":
+    ievade_code()
+    if ievade == "print":
         printPicture(x2_1)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPicture(x2_1_3)
-        elif i == "python":
+        elif ievade == "python":
             printPicture(x2_1_1h)
-        inpyt()
-        if i == "python":
+        ievade_code()
+        if ievade == "python":
             printPictirefinal(x_final)
-        elif i == "span":
+        elif ievade == "span":
             printPictirefinal(x_final)
-    if i == "python":
+    if ievade == "python":
         printPicture(x2_1h)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPicture(x2_1h_3)
-        elif i == "print":
+        elif ievade == "print":
             printPicture(x2_1_1h)
-        inpyt()
-        if i == "print":
+        ievade_code()
+        if ievade == "print":
             printPictirefinal(x_final)
-        elif i == "span":
+        elif ievade == "span":
             printPictirefinal(x_final)
-    if i == "span":
+    if ievade == "span":
         printPicture(x2_3)
-        inpyt()
-        if i == "print":
+        ievade_code()
+        if ievade == "print":
             printPicture(x2_1_3)
-        elif i == "python":
+        elif ievade == "python":
             printPicture(x2_1h_3)
-        inpyt()
-        if i == "print":
+        ievade_code()
+        if ievade == "print":
             printPictirefinal(x_final)
-        elif i == "python":
+        elif ievade == "python":
             printPictirefinal(x_final)
-if i == "python":
+if ievade == "python":
     printPicture(x1h)
-    inpyt()
-    if i == "git":
+    ievade_code()
+    if ievade == "git":
         printPicture(x2_1h)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPicture(x2_1h_3)
-        elif i == "print":
+        elif ievade == "print":
             printPicture(x2_1_1h)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPictirefinal(x_final)
-        elif i == "print":
+        elif ievade == "print":
             print(x_final)
-    if i == "span":
+    if ievade == "span":
         printPicture(x1h_3)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPicture(x2_1h_3)
-        elif i == "print":
+        elif ievade == "print":
             printPicture(x1h_3_1)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPictirefinal(x_final)
-        elif i == "print":
+        elif ievade == "print":
             printPictirefinal(x_final)
-    if i == "print":
+    if ievade == "print":
         printPicture(x1h_1)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPicture(x1h_3_1)
-        elif i == "git":
+        elif ievade == "git":
             printPicture(x2_1_1h)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPictirefinal(x_final)
-        elif i == "span":
+        elif ievade == "span":
             printPictirefinal(x_final)
-if i == "print":
+if ievade == "print":
     printPicture(x1)
-    inpyt()
-    if i == "git":
+    ievade_code()
+    if ievade == "git":
         printPicture(x2_1)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPicture(x2_1_3)
-        elif i == "python":
+        elif ievade == "python":
             printPicture(x2_1_1h)
-        inpyt()
-        if i == "span":
+        ievade_code()
+        if ievade == "span":
             printPictirefinal(x_final)
-        elif i == "python":
+        elif ievade == "python":
             printPictirefinal(x_final)
-    if i == "span":
+    if ievade == "span":
         printPicture(x1_3)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPicture(x2_1_3)
-        elif i == "python":
+        elif ievade == "python":
             printPicture(x1h_3_1)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPictirefinal(x_final)
-        elif i == "python":
+        elif ievade == "python":
             printPictirefinal(x_final)
-    if i == "python":
+    if ievade == "python":
         printPicture(x1h_1)
-        inpyt()
-        if i == "span":
-            os.system("cls")
-            print(x1h_3_1)
+        ievade_code()
+        if ievade == "span":
             printPicture(x1h_3_1)
-        elif i == "git":
+        elif ievade == "git":
             printPicture(x2_1_1h)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPictirefinal(x_final)
-        elif i == "span":
+        elif ievade == "span":
             printPictirefinal(x_final)
-if i == "span":
+if ievade == "span":
     printPicture(x3)
-    inpyt()
-    if i == "git":
+    ievade_code()
+    if ievade == "git":
         printPicture(x2_3)
-        inpyt()
-        if i == "print":
+        ievade_code()
+        if ievade == "print":
             printPicture(x2_1_3)
-        elif i == "python":
+        elif ievade == "python":
             printPicture(x2_1h_3)
-        inpyt()
-        if i == "print":
+        ievade_code()
+        if ievade == "print":
             printPictirefinal(x_final)
-        elif i == "python":
+        elif ievade == "python":
             printPictirefinal(x_final)
-    if i == "print":
+    if ievade == "print":
         printPicture(x1_3)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPicture(x2_1_3)
-        elif i == "python":
+        elif ievade == "python":
             printPicture(x1h_3_1)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPictirefinal(x_final)
-        elif i == "python":
+        elif ievade == "python":
             printPictirefinal(x_final)
-    if i == "python":
+    if ievade == "python":
         printPicture(x1h_3)
-        inpyt()
-        if i == "print":
+        ievade_code()
+        if ievade == "print":
             printPicture(x1h_3_1)
-        elif i == "git":
+        elif ievade == "git":
             printPicture(x2_1h_3)
-        inpyt()
-        if i == "git":
+        ievade_code()
+        if ievade == "git":
             printPictirefinal(x_final)
-        elif i == "print":
+        elif ievade == "print":
             printPictirefinal(x_final)
