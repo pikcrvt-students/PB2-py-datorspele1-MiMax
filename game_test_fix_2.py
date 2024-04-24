@@ -1,6 +1,7 @@
 import time
 import sys
 import os
+
 x_final = '''  
        _ _ _   _ _ _
        | g |   | s |
@@ -250,7 +251,6 @@ time.sleep(1)
 print(Jautajumi2)
 time.sleep(1)
 print(Jautajumi3)
-pal = "Apsveicu!"
 
 def printPicture(xH): 
     os.system("cls") 
@@ -259,7 +259,7 @@ def printPicture(xH):
 def printPictirefinal(xH):
     os.system("cls")
     print(xH)
-    print(pal)
+    print("Apsveicu!")
     sys.exit()
 
 ievade=""
@@ -395,7 +395,7 @@ if ievade == "print":
             printPicture(x2_1_1h)
         ievade_code()
         if ievade == "git":
-            printPictirefinal(x_final)
+            printPicture(x_final)
         elif ievade == "span":
             printPictirefinal(x_final)
 if ievade == "span":
