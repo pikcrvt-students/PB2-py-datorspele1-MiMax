@@ -238,11 +238,11 @@ time.sleep(3)
 Jautajumi = '''1 (vertikali) (5 burti) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?
 1 (horizontali) (5 burti) Kāda programmēšanas valoda tiek izmantota Django projektā?
 2 (3 burti) Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? 
-3 (4 burti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
+3 (4 vurti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
 Jautajumi1 = '''1 (vertikali) (5 burti) Kura Python funkcija tiek izmantota, lai attēlotu tekstu uz ekrāna?'''
 Jautajumi1h= '''1 (horizontali) (5 burti) Kāda programmēšanas valoda tiek izmantota Django projektā?'''
 Jautajumi2 = '''2 (3 burti) Kura versiju kontroles sistēma tiek plaši izmantota, lai pārvaldītu un izsekotu izmaiņas kodā? '''
-Jautajumi3 = '''3 (4 burti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
+Jautajumi3 = '''3 (4 vurti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
 
 print(Jautajumi1)
 time.sleep(1)
@@ -251,6 +251,7 @@ time.sleep(1)
 print(Jautajumi2)
 time.sleep(1)
 print(Jautajumi3)
+pal = "Apsveicu!"
 
 def printPicture(xH): 
     os.system("cls") 
@@ -259,7 +260,7 @@ def printPicture(xH):
 def printPictirefinal(xH):
     os.system("cls")
     print(xH)
-    print("Apsveicu!")
+    print(pal)
     sys.exit()
 
 ievade=""
@@ -395,7 +396,7 @@ if ievade == "print":
             printPicture(x2_1_1h)
         ievade_code()
         if ievade == "git":
-            printPicture(x_final)
+            printPictirefinal(x_final)
         elif ievade == "span":
             printPictirefinal(x_final)
 if ievade == "span":
