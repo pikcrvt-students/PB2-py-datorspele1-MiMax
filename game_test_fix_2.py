@@ -1,6 +1,7 @@
 import time
 import sys
 import os
+import math
 
 x_final = '''  
        _ _ _   _ _ _
@@ -251,7 +252,16 @@ time.sleep(1)
 print(Jautajumi2)
 time.sleep(1)
 print(Jautajumi3)
+start = time.time()
 pal = "Apsveicu!"
+
+def nakamais_meginajums():
+    print("Jūs gribat uzlabot savu rezultatu?")
+    print("Ja gribat, nospežat ENTER")
+    print("Ja ne, ")       
+    ievade = input()
+    if ievade == "":
+        print("test")
 
 def printPicture(xH): 
     os.system("cls") 
@@ -261,6 +271,10 @@ def printPictirefinal(xH):
     os.system("cls")
     print(xH)
     print(pal)
+    end = time.time()
+    result_time = round(end - start,3)
+    print("Jūsu laiks:", result_time)
+    nakamais_meginajums()
     sys.exit()
 
 ievade=""
