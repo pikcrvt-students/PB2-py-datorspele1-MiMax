@@ -477,7 +477,7 @@ def printPictirefinal(xH):
 laika_saraksts = [0]
 
 def nakamais_meginajums():
-    print("Vai gribat uzlabot savu rezultātu? (Y/N)")    
+    print("Vai gribat uzlabot savu rezultātu? (Y/N)")
     ievade = input()
     if ievade == "Y" or ievade == "y":
         global start_time
@@ -485,23 +485,16 @@ def nakamais_meginajums():
         start_time = time.time()
         game_basic()
         nakamais_meginajums()
-    else: #speles beigas
+    else:  #speles beigas
         del(laika_saraksts[0])
-        elementu_skaits = len(laika_saraksts)
-        labakais_laiks = laika_saraksts[0]
-        #sortirovka
-        for num in range(1, elementu_skaits):
-            print(laika_saraksts[num], end=", ")
-            if laika_saraksts[num] < labakais_laiks:
-                labakais_laiks = laika_saraksts[num]
-        n = 0
-        for num in range(elementu_skaits - 1): 
-            print(n, end="")
-            print(laika_saraksts[num])
-            n += 1
+        laika_saraksts.sort() # masiva sakartošana
+        elementu_skaits = len(laika_saraksts) # elementu saskaitišana
+        
+        for num in range(elementu_skaits):
+            print(str(num + 1) + ". vieta:", laika_saraksts[num], "sekundes")
 
-        print("Jūsu labakais laiks:", laika_saraksts[0], "sekundes")
         print("Paldies par spelešanu!")
+        time.sleep(15)
         sys.exit()
         
 game_start()
