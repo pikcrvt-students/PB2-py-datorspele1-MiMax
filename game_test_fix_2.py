@@ -2,7 +2,7 @@ import time
 import sys
 import os
 
-x_git_print_python_span = '''  
+x_git_print_python_span = '''
        _ _ _   _ _ _
        | g |   | s |
        | i |   | p |
