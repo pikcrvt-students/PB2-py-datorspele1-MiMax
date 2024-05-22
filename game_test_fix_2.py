@@ -2,7 +2,7 @@ import time
 import sys
 import os
 
-x_final = '''  
+x_git_print_python_span = '''  
        _ _ _   _ _ _
        | g |   | s |
        | i |   | p |
@@ -235,9 +235,13 @@ Jautajums_git = '''2 (3 burti) Kura versiju kontroles sistēma tiek plaši izman
 Jautajums_span = '''3 (4 burti) Programmēšanas valoda, kas paredzēta Parrot virtuālajai mašīnai.'''
 
 def game_start():
+    global atbildes
     global Kludu_skaits
     Kludu_skaits = 5
+    for i in range(4):
+        atbildes[i] = 0
     os.system("cls")
+    print(atbildes)
     print(x0, "Sveicināti! Šodien jūs risināsiet krustvārdu mīklu, novēlu jums veiksmi un nepieļaujiet kļūdas :)")
     print ("Jums palika", Kludu_skaits,"kļūdas")
     time.sleep(3)
@@ -251,14 +255,44 @@ def game_start():
     
 def printPicture(xH): 
     os.system("cls") 
+    print(atbildes)
     print(xH) 
     print(Jautajumi)
+
+atbildes = [0]*4
+
+def ievade_atbilde_parbauda():
+    if ievade == "git":
+        if atbildes[0] == 1:
+            print("Jūs jau ievadījāt šo atbildi!")
+            ievade_code()
+        else:  
+            atbildes[0] = 1
+    elif ievade == "python":
+        if atbildes[1] == 1:
+            print("Jūs jau ievadījāt šo atbildi!")
+            ievade_code()
+        else:  
+            atbildes[1] = 1   
+    elif ievade == "print":
+        if atbildes[2] == 1:
+            print("Jūs jau ievadījāt šo atbildi!")
+            ievade_code()
+        else:  
+            atbildes[2] = 1
+    elif ievade == "span":
+        if atbildes[3] == 1:
+            print("Jūs jau ievadījāt šo atbildi!")
+            ievade_code()
+        else:  
+            atbildes[3] = 1
 
 def ievade_code():
     global ievade
     global Kludu_skaits
     print("Ievadiet atbildi: ", end="")
     ievade = input("")
+    ievade_atbilde_parbauda()
     while ievade != "git" and ievade != "python" and ievade != "span" and ievade != "print":
         print()
         print("Nepareizi!")
@@ -269,6 +303,7 @@ def ievade_code():
             time.sleep(1)
             sys.exit()
         ievade = input("")
+        ievade_atbilde_parbauda()
     
 def game_basic():
     ievade_code()
@@ -284,9 +319,9 @@ def game_basic():
                 printPicture(x_git_print_python)
             ievade_code()
             if ievade == "python":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "span":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "python":
             printPicture(x_git_python)
             ievade_code()
@@ -296,9 +331,9 @@ def game_basic():
                 printPicture(x_git_print_python)
             ievade_code()
             if ievade == "print":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "span":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "span":
             printPicture(x_git_span)
             ievade_code()
@@ -308,9 +343,9 @@ def game_basic():
                 printPicture(x_git_python_span)
             ievade_code()
             if ievade == "print":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "python":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
     if ievade == "python":
         printPicture(x_python)
         ievade_code()
@@ -323,9 +358,9 @@ def game_basic():
                 printPicture(x_git_print_python)
             ievade_code()
             if ievade == "span":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "print":
-                print(x_final)
+                print(x_git_print_python_span)
         if ievade == "span":
             printPicture(x_python_span)
             ievade_code()
@@ -335,9 +370,9 @@ def game_basic():
                 printPicture(x_python_span_print)
             ievade_code()
             if ievade == "git":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "print":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "print":
             printPicture(x_python_print)
             ievade_code()
@@ -347,9 +382,9 @@ def game_basic():
                 printPicture(x_git_print_python)
             ievade_code()
             if ievade == "git":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "span":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
     if ievade == "print":
         printPicture(x_print)
         ievade_code()
@@ -362,9 +397,9 @@ def game_basic():
                 printPicture(x_git_print_python)
             ievade_code()
             if ievade == "span":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "python":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "span":
             printPicture(x_print_span)
             ievade_code()
@@ -374,9 +409,9 @@ def game_basic():
                 printPicture(x_python_span_print)
             ievade_code()
             if ievade == "git":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "python":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "python":
             printPicture(x_python_print)
             ievade_code()
@@ -386,9 +421,9 @@ def game_basic():
                 printPicture(x_git_print_python)
             ievade_code()
             if ievade == "git":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "span":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
     if ievade == "span":
         printPicture(x_span)
         ievade_code()
@@ -401,9 +436,9 @@ def game_basic():
                 printPicture(x_git_python_span)
             ievade_code()
             if ievade == "print":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "python":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "print":
             printPicture(x_print_span)
             ievade_code()
@@ -413,9 +448,9 @@ def game_basic():
                 printPicture(x_python_span_print)
             ievade_code()
             if ievade == "git":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "python":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
         if ievade == "python":
             printPicture(x_python_span)
             ievade_code()
@@ -425,12 +460,11 @@ def game_basic():
                 printPicture(x_git_python_span)
             ievade_code()
             if ievade == "git":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
             elif ievade == "print":
-                printPictirefinal(x_final)
+                printPictirefinal(x_git_print_python_span)
 
 def printPictirefinal(xH):
-    global result_time
     os.system("cls")
     print(xH)
     print("Apsveicu!")
