@@ -241,7 +241,6 @@ def game_start():
     for i in range(4):
         atbildes[i] = 0
     os.system("cls")
-    print(atbildes)
     print(x0, "Sveicināti! Šodien jūs risināsiet krustvārdu mīklu, novēlu jums veiksmi un nepieļaujiet kļūdas :)")
     print ("Jums palika", Kludu_skaits,"kļūdas")
     time.sleep(3)
@@ -255,7 +254,6 @@ def game_start():
     
 def printPicture(xH): 
     os.system("cls") 
-    print(atbildes)
     print(xH) 
     print(Jautajumi)
 
